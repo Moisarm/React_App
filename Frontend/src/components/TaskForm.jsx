@@ -26,10 +26,13 @@ export const TaskForm = ({createTask}) => {
         return (
             //El objeto padre es el formulario
             <form onSubmit={handleSubimt}>
+                
                 <input placeholder='Add a task' 
-                onChange={handleChange}/>
+                onChange={handleChange} value={title}/*el value es igual al hook state*//>
+                
                 <textarea placeholder="Add a description" 
-                onChange={handleDescription}/>
+                onChange={handleDescription} value={description}/*El value es igual al hook state*//>
+               
                 <button>
                     save
                 </button>

@@ -28,7 +28,7 @@ export const TaskForm = ({createTask}) => {
             <form onSubmit={handleSubimt}>
                 
                 <input placeholder='Add a task' 
-                onChange={handleChange} value={title}/*el value es igual al hook state*//>
+                onChange={handleChange} value={title}/*el value es igual al hook state*/ autoFocus/>
                 
                 <textarea placeholder="Add a description" 
                 onChange={handleDescription} value={description}/*El value es igual al hook state*//>

@@ -2,7 +2,7 @@ import { TaskCard } from "./TaskCard"
 // uso rfce para crear componentes sin escribir mucho codigo
 
 //pido las tareas como un prop
-const TaskList=({tasks})=> {
+const TaskList=({tasks, deleteTask})=> {
 
 if(tasks.length === 0){
     return <h1>No hay tareas</h1>
@@ -16,7 +16,7 @@ console.log("TaskList")
     <h1>Lista de tareas</h1>
     {/* mapear cada elemento de tasks */}
     {tasks.map((task)=>(
-        <TaskCard key={task.id} task={task}/>
+        <TaskCard key={task.id} task={task} deleteTask={deleteTask}/>
     ))}
     </>
   )

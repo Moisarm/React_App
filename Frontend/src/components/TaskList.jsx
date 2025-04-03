@@ -16,13 +16,12 @@ const TaskList = () => {
   console.log("TaskList");
   console.log(tasks);
   return (
-    <>
-      <h1>Lista de tareas</h1>
+    <div className="grid grid-cols-4 gap-2">
       {/* mapear cada elemento de tasks */}
       {tasks.map((task) => (
         <TaskCard key={task.id} task={task} />
       ))}
-    </>
+    </div>
   );
 };
 

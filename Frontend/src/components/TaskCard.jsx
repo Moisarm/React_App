@@ -7,13 +7,14 @@ export const TaskCard = ({ task }) => {
 
   return (
     //Ya no se coloca el id en este div, sino en el Tasklist
-    <div>
-      <h1>{task.title}</h1>
-      <p>{task.description}</p>
+    <div className="bg-gray-800 text-white p-5 rounded-md">
+      <h1 className="text-2xl font-bold capitalize">{task.title}</h1>
+      <p className="text-sm text-gray-500">{task.description}</p>
       <button
-        onClick={() =>
-          deleteTask(task.id)
-        } /*Siempre que se use el onclick se debe utilizar una función anónima la cual ejecute la función deleteTask con el parametro que se le quiera pasar ()=>{deleteTask(task.id)} */
+        className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md mt-4"
+        onClick={() => deleteTask(task.id)} /*Siempre que se use el onclick se
+        debe utilizar una función anónima la cual ejecute la función deleteTask
+        con el parametro que se le quiera pasar ()=>{deleteTask(task.id)} */
       >
         delete
       </button>

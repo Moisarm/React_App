@@ -9,7 +9,7 @@ const TaskList = () => {
   const { tasks } = useContext(TaskContext);
 
   if (tasks.length === 0) {
-    return <h1>No hay tareas</h1>;
+    return <h1 className="text-white text-4xl">No hay tareas</h1>;
   }
 
   //muestro el contenido de tasks
